@@ -1,10 +1,17 @@
-Deploy: proyecto-final-pizzeria-react.vercel.app
+Deploy: https://proyecto-final-pizzeria-react-nvz49hrjn-angelica-sotos-projects.vercel.app
 
-# React + Vite
+1.- Se crea una variable global llamada token que guarda el token si la respuesta fue exitosa por JWT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2.- Se usa UserContext para implementar un metodo que elimine el token y el email del estado
 
-Currently, two official plugins are available:
+3.- En el UserContext, implementa un método para obtener el perfil del usuario autenticado consumiendo la ruta /api/auth/me
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+4.- Tanto la página de Login como la de Register, deben implementar los métodos creados en UserContext para acceder al sistema.
+
+5.- En la pagina profile, se muestra el email autenticado y el boton cerrar sesion que elimina el token del localStorage
+
+6.- El boton logout del Navbar cierra sesion del usuario
+
+7.- En Cart.js.jsx , implementar metodo para enviar carrito de compra al backend, consumiendo la ruta: /api/checkouts
+
+8.- En la pagina Cart.jsx, muestra un mensaje de exito cuando se haya realizado la compra
